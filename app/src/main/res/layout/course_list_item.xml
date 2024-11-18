@@ -106,6 +106,7 @@
             android:layout_height="0dp"
             android:id="@+id/course_description_tv"
             tools:text="@tools:sample/lorem/random"
+            android:maxLength="120"
             app:layout_constraintTop_toBottomOf="@id/course_title_tv"
             app:layout_constraintStart_toEndOf="@id/start_gl"
             app:layout_constraintEnd_toStartOf="@id/end_gl"

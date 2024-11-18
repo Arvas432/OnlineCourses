@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_15"
     tools:context=".ui.CourseFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"/>
+   <androidx.appcompat.widget.AppCompatImageView
+       android:id="@+id/course_image_iv"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:scaleType="centerCrop"
+       tools:src="@drawable/cover_placeholder"/>
+    <ImageButton
+        android:id="@+id/bookmark_btn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/bookmark_small"
+        android:background="@drawable/transparent_round_bg"/>
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@id/start_gl"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/arrow_left"
+        android:background="@drawable/transparent_round_bg"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/course_rating_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/course_image_iv"
+        app:layout_constraintBottom_toBottomOf="@id/course_image_iv"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/regular_white_12"
+        tools:text="4.9"
+        android:background="@drawable/transparent_round_bg"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        android:drawableStart="@drawable/star_fill"
+        android:drawablePadding="4dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/coure_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/course_rating_tv"
+        app:layout_constraintBottom_toBottomOf="@id/course_rating_tv"
+        tools:text="22 Мая 2024"
+        android:textAppearance="@style/regular_white_12"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        android:background="@drawable/transparent_round_bg"/>
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/course_image_iv"
+        app:layout_constraintStart_toStartOf="@id/start_gl"
+        app:layout_constraintEnd_toEndOf="@id/end_gl">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/regular_white_22"
+            tools:text="Java разработчик с нуля"/>
 
-</FrameLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

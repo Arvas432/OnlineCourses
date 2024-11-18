@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_15"
+    tools:context=".ui.MainFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_tl"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="@id/start_gl"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/filter_btn"
+        app:hintEnabled="false"
+        app:startIconTint="@color/white_F3"
+        app:cursorColor="@color/white_F3"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_courses"
+            android:background="@drawable/search_field_bg"
+            android:textColorHint="@color/white_F3_50alph"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white_F3"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/filter_btn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/search_field_bg"
+        app:layout_constraintEnd_toStartOf="@id/end_gl"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/funnel"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/filter_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/end_gl"
+        app:layout_constraintTop_toBottomOf="@id/search_tl"
+        tools:text="По дате добавления"
+        android:textAppearance="@style/regular_green_14"
+        android:drawableEnd="@drawable/arrow_down_up_fill"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/start_gl"
+        app:layout_constraintEnd_toStartOf="@id/end_gl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_tv"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/course_list_item"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

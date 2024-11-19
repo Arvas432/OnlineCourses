@@ -12,4 +12,9 @@
     <string name="start_course">Начать курс</string>
     <string name="go_to_platform">Перейти на платформу</string>
     <string name="about_course">О курсе</string>
+    <string name="profile">Профиль</string>
+    <string name="message_support">Написать в поддержку</string>
+    <string name="settings">Настройки</string>
+    <string name="log_out">Выйти из аккаунта</string>
+    <string name="your_courses">Ваши курсы</string>
 </resources>

@@ -1,14 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AccountFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AccountFragment"
+    android:background="@color/black_15">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/screen_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/start_gl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_gl"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/regular_white_22"
+        android:layout_marginTop="40dp"
+        android:text="@string/profile"/>
+    <LinearLayout
+        android:id="@+id/options_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_gray_rounded_rectangle"
+        app:layout_constraintStart_toStartOf="@id/start_gl"
+        app:layout_constraintEnd_toEndOf="@id/end_gl"
+        app:layout_constraintTop_toBottomOf="@id/screen_title_tv"
+        android:paddingStart="16dp"
+        android:paddingVertical="8dp"
+        android:orientation="vertical"
+        android:paddingEnd="12dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/message_support_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/message_support"
+            android:textAppearance="@style/regular_white_14"
+            android:layout_marginBottom="10dp"
+            app:drawableEndCompat="@drawable/arrow_right"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/separator"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/regular_white_14"
+            app:drawableEndCompat="@drawable/arrow_right"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/separator"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/logout_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/regular_white_14"
+            app:drawableEndCompat="@drawable/arrow_right"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/your_courses_tv"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/start_gl"
+        app:layout_constraintTop_toBottomOf="@id/options_layout"
+        app:layout_constraintEnd_toEndOf="@id/end_gl"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/regular_white_22"
+        android:layout_marginTop="16dp"
+        android:text="@string/your_courses"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/start_gl"
+        app:layout_constraintEnd_toEndOf="@id/end_gl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_courses_tv"
+        tools:listitem="@layout/profile_course_item"/>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

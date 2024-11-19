@@ -12,6 +12,10 @@
     <style name="custom_indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/light_gray_3A</item>
     </style>
+    <style name="shape_appearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
 
     <style name="regular_green_14">
         <item name="fontFamily">@font/roboto_medium</item>
@@ -25,6 +29,12 @@
         <item name="android:textColor">@color/white_F3</item>
         <item name="fontWeight">400</item>
     </style>
+    <style name="regular_white_14">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white_F3</item>
+        <item name="fontWeight">500</item>
+    </style>
     <style name="regular_white_16">
         <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textSize">16sp</item>
@@ -34,6 +44,12 @@
     <style name="regular_gray_12">
         <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white_F3_50alph</item>
+        <item name="fontWeight">400</item>
+    </style>
+    <style name="regular_gray_14">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white_F3_50alph</item>
         <item name="fontWeight">400</item>
     </style>

@@ -17,6 +17,12 @@
         <item name="cornerSize">20dp</item>
     </style>
 
+    <style name="regular_green_12">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/green_56</item>
+        <item name="fontWeight">400</item>
+    </style>
     <style name="regular_green_14">
         <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textSize">14sp</item>
@@ -56,6 +62,12 @@
     <style name="regular_white_22">
         <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/white_F3</item>
+        <item name="fontWeight">400</item>
+    </style>
+    <style name="regular_white_28">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/white_F3</item>
         <item name="fontWeight">400</item>
     </style>

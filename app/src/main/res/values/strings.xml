@@ -12,4 +12,22 @@
     <string name="start_course">Начать курс</string>
     <string name="go_to_platform">Перейти на платформу</string>
     <string name="about_course">О курсе</string>
+    <string name="profile">Профиль</string>
+    <string name="message_support">Написать в поддержку</string>
+    <string name="settings">Настройки</string>
+    <string name="log_out">Выйти из аккаунта</string>
+    <string name="your_courses">Ваши курсы</string>
+    <string name="registration">Регистрация</string>
+    <string name="email">Email</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="password">Пароль</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="repeat_password">Повторить пароль</string>
+    <string name="enter_password_again">Введите пароль еще раз</string>
+    <string name="register">Регистрация</string>
+    <string name="already_have_an_account">Уже есть аккаунт?</string>
+    <string name="log_in">Войти</string>
+    <string name="forgot_password">Забыл пароль</string>
+    <string name="thousands_of_course_in_one_place">Тысячи курсов\nв одном месте</string>
+    <string name="continue_text">Продолжить</string>
 </resources>

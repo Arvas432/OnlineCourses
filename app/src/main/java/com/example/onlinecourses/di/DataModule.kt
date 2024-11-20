@@ -15,7 +15,7 @@ import retrofit2.create
 
 val dataModule = module {
     single<StepicApi> {
-        val gson = GsonBuilder().setLenient().create()
+        val gson = GsonBuilder().create()
         Retrofit.Builder().baseUrl("https://stepik.org/api/").addConverterFactory(GsonConverterFactory.create(gson)).build().create(StepicApi::class.java)
     }
     factory { Gson() }

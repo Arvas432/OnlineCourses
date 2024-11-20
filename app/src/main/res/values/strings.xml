@@ -25,4 +25,9 @@
     <string name="repeat_password">Повторить пароль</string>
     <string name="enter_password_again">Введите пароль еще раз</string>
     <string name="register">Регистрация</string>
+    <string name="already_have_an_account">Уже есть аккаунт?</string>
+    <string name="log_in">Войти</string>
+    <string name="forgot_password">Забыл пароль</string>
+    <string name="thousands_of_course_in_one_place">Тысячи курсов\nв одном месте</string>
+    <string name="continue_text">Продолжить</string>
 </resources>

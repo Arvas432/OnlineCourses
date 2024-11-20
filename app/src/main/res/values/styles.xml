@@ -65,4 +65,10 @@
         <item name="android:textColor">@color/white_F3</item>
         <item name="fontWeight">400</item>
     </style>
+    <style name="regular_white_28">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/white_F3</item>
+        <item name="fontWeight">400</item>
+    </style>
 </resources>
